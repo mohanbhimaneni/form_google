@@ -3,7 +3,7 @@ Submit data to google form
     This following block is the form window.
     Call openForm() function at the trigger site
     Better to use the following:
-        <a href="#" onclick="openForm()">click here</a>
+        "<a href="#" onclick="openForm()">click here</a>"
     ## Code
     <link rel="stylesheet" href="close.css">
     <link rel="stylesheet" href="form.css">
