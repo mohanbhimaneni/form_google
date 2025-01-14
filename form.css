@@ -1,0 +1,59 @@
+input[type=text], select, textarea, input[type=email], input[type=number] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit],.submit,.close,.reset {
+    background-color: #04AA6D;
+    margin-top: 1%;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+  }
+  
+  input[type=submit]:hover,.submit:hover,.close:hover,.reset:hover {
+    background-color: #45a049;
+  }
+
+.form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3vw;
+}
+
+.form > .headers_in_form , .form>.buttons_in_form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form > button{
+    max-width: fit-content;
+}
+
+#floating_window{
+    border-radius: 20px;
+    background-color:lightcoral;
+    z-index: 100;
+    position: absolute;
+    top: 10vh;
+    left: 3vw;
+    right: 3vw;
+}
+
+.display_none{
+    display: none;
+}

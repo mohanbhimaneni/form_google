@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="close.css">
+    <link rel="stylesheet" href="form.css">
+    <title>Form</title>
+</head>
+<body>
+    <div id="floating_window" class="display_none div_to_toggle">
+    <form class="form">
+        <div class="headers_in_form">
+            <h2>Please fill this form!!</h2>
+            <div class="close_icon" onclick="closeForm()"></div>
+        </div>
+        <label for="Name">Name : </label>
+        <input name="Name" type="text" placeholder="Enter your Name" required>
+        <br>
+        <label for="Email">Email : </label>
+        <input name="Email" type="email" placeholder="Enter your email" required>
+        <br>
+        <label for="Phone">Contact Number : </label>
+        <input name="Phone" type="number" placeholder="Enter your contact number" required>
+        <br>
+        <label for="Alternate_Phone">Alternate number : </label>
+        <input name="Alternate_Phone" type="number" placeholder="Enter an alternate contact number">
+        <br>
+        <label for="Event">Event : </label>
+        <input name="Event" type="text" placeholder="Enter the event name">
+        <br>
+        <div class="buttons_in_form">
+            <button class="submit" type="submit">Submit</button>
+            <button class="reset" type="reset">Reset</button>
+            <button onclick="closeForm()" class="close" type="reset">Close</button>
+        </div>
+    </form>
+    </div>
+    <button class="toggle_button" onclick="openForm()">Click here to fill form</button>
+    <script src="form.js"></script>
+</body>
+</html>

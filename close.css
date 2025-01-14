@@ -1,0 +1,27 @@
+.close_icon {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+  }
+  .close_icon:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+  .close_icon:before, .close_icon:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+  }
+  .close_icon:before {
+    transform: rotate(45deg);
+  }
+  .close_icon:after {
+    transform: rotate(-45deg);
+  }
+  
