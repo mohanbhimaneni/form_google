@@ -1,10 +1,10 @@
 # form_google
-Submit data to google form
-    This following block is the form window.
-    Call openForm() function at the trigger site
-    Better to use the following:
-        "<a href="#" onclick="openForm()">click here</a>"
-    ## Code
+```html
+    <!-- This following block is the form window. -->
+    <!-- Call openForm() function at the trigger site -->
+    <!-- Better to use the following:
+        <a href="#" onclick="openForm()">click here</a>
+    -->
     <link rel="stylesheet" href="close.css">
     <link rel="stylesheet" href="form.css">
     <div id="floating_window" class="display_none div_to_toggle">
@@ -65,3 +65,4 @@ Submit data to google form
     </div>
     <script src="form.js"></script>
     <!-- End of form section -->
+```
