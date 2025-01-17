@@ -1,0 +1,215 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+h1, h2 {
+    color: #2d572c;
+    text-align: center;
+}
+
+p {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    background-image: url(images/deer.png);
+    min-height: 650px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: lightblue;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    color: beige;
+    margin: 0;
+}
+
+.hero-text p{
+    color: lightblue;
+}
+
+/* Navigation Bar */
+
+nav{
+    background-color: #030303;
+    opacity: 70%;
+    position: relative;
+    width: auto;
+}
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: inherit;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar img{
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+    opacity: 100%;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+    border-radius: 10%;
+}
+
+.navbar a:hover {
+    background-color: #4c8b64;
+}
+
+/* About Section */
+#about {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Announcements Section */
+#announcements {
+    padding: 20px;
+    background-color: #e9f5e6;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.announcement-slider p {
+    font-size: 18px;
+    color: #2d572c;
+    animation: slide 10s infinite;
+}
+
+@keyframes slide {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Quick Links Section */
+#quick-links {
+    padding: 20px;
+    text-align: center;
+}
+
+.quick-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #2d572c;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.button:hover {
+    background-color: #4c8b64;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #2d572c;
+    color: white;
+}
+
+footer p{
+    color: lightblue;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-text {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    #about, #announcements {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .quick-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .navbar a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
