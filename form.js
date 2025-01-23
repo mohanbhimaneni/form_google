@@ -1,24 +1,36 @@
-const form=document.getElementsByClassName('form')[0];
-const submitButton=document.querySelector('.submit');
-console.log(form.classList,submitButton.classList);
-const scriptURL='https://script.google.com/macros/s/AKfycbw83W98mLRgilM-Cyf_5GrlEyYlVteTsyteqDExn9MztqtfEGyVbVoiQPdGgA--o6Tf_w/exec';
-form.addEventListener('submit',e=>{
-    submitButton.disabled=true;
-    e.preventDefault()
-    let requestBody=new FormData(form);
-    fetch(scriptURL,{method:'POST',body:requestBody,mode:"no-cors"})
-        .then(response=>{
-            alert('Success!',response);
-            submitButton.disabled=false;
-        })
-        .catch(error=>{
-            alert('Error!',error.message);
-            submitButton.disabled=false;
-        })
-    form.reset();
-})
+const form = document.getElementsByClassName('form')[0];
+const submitButton = document.querySelector('.submit');
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyBvjjUKMZZTuqQ_d4zCASnCat8MTLsq37vNNNyJwsgl505ETmwei8qp7ARojxDWo_-OA/exec';
 
-function closeForm(){
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    submitButton.disabled = true;
+
+    let requestBody = new FormData(form);
+
+    fetch(scriptURL, {
+        method: 'POST',
+        body: requestBody
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.result === 'error') {
+            alert('Error: ' + result.message);
+        } else {
+            alert('Success! Your registration was submitted. You will get an email soon.');
+            form.reset();
+            document.getElementById("floating_window").classList.toggle("display_none");
+        }
+    })
+    .catch(error => {
+        alert('Error! Unable to submit details: ' + error.message);
+    })
+    .finally(() => {
+        submitButton.disabled = false;
+    });
+});
+
+function closeForm() {
     document.getElementById("floating_window").classList.toggle("display_none");
 }
 
