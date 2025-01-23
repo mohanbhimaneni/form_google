@@ -1,5 +1,5 @@
 input[type=text], select, textarea, input[type=email], input[type=number] {
-    width: 100%;
+    width: inherit;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -38,7 +38,7 @@ input[type=text], select, textarea, input[type=email], input[type=number] {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 }
 
 .form > button{
@@ -49,10 +49,11 @@ input[type=text], select, textarea, input[type=email], input[type=number] {
     border-radius: 20px;
     background-color:lightcoral;
     z-index: 100;
-    position: absolute;
+    position:absolute;
     top: 10vh;
     left: 3vw;
     right: 3vw;
+    overflow: visible;
 }
 
 .display_none{
